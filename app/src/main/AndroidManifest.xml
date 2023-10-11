@@ -41,10 +41,10 @@
             android:exported="false" />
         <activity
             android:name=".UiScreens.StudentsPages.StudentHomeActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".UiScreens.DoctorPages.CourseControlActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".UiScreens.Splash.SplashScreenActivity"
             android:exported="true">
@@ -59,16 +59,16 @@
             android:exported="false" />
         <activity
             android:name=".UiScreens.DoctorPages.DoctorHomeActivity"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".UiScreens.LoginPages.SignUp"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".UiScreens.LoginPages.SignIn"
-            android:exported="true" />
+            android:exported="false" />
         <activity
             android:name=".StudentOrDoctor"
-            android:exported="true" />
+            android:exported="false" />
     </application>
 
 </manifest>
