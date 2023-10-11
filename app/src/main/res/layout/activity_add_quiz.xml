@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLightWhite"
+    tools:context=".UiScreens.DoctorPages.AddQuizActivity">
+
+    <TextView
+        android:id="@+id/tv_create_quiz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cairo_bold"
+        android:text="Create MCQ Assignment"
+        android:textColor="#686868"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/til_your_question"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_your_question"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/et_answer_1"
+        app:layout_constraintTop_toBottomOf="@+id/tv_create_quiz">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_your_question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Your Question"
+            android:textSize="18sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <EditText
+        android:id="@+id/et_answer_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/rounded"
+        android:gravity="center"
+        android:hint="Answer 1"
+        android:padding="18dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/et_answer_2"
+        app:layout_constraintTop_toBottomOf="@+id/til_your_question" />
+
+
+    <EditText
+        android:id="@+id/et_answer_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/rounded"
+        android:gravity="center"
+        android:hint="Answer 2"
+        android:padding="18dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/et_answer_3"
+        app:layout_constraintTop_toBottomOf="@+id/et_answer_1" />
+
+    <EditText
+        android:id="@+id/et_answer_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/rounded"
+        android:gravity="center"
+        android:hint="Answer 3"
+        android:padding="18dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/et_answer_4"
+        app:layout_constraintTop_toBottomOf="@+id/et_answer_2" />
+
+    <EditText
+        android:id="@+id/et_answer_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/rounded"
+        android:gravity="center"
+        android:hint="Answer 4"
+        android:padding="18dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/et_correct_answer"
+        app:layout_constraintTop_toBottomOf="@+id/et_answer_3" />
+
+    <EditText
+        android:id="@+id/et_correct_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Correct Answer Is ?"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_upload_quiz"
+        app:layout_constraintEnd_toStartOf="@+id/btn_next_question"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_answer_4" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_next_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cairo_semibold"
+        android:text="Next Question"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/et_correct_answer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/et_correct_answer"
+        app:layout_constraintTop_toTopOf="@id/et_correct_answer" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_upload_quiz"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:fontFamily="@font/cairo_semibold"
+        android:text="Upload Quiz"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_correct_answer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

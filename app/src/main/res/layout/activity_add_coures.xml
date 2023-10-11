@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryTextColor"
+    tools:context=".UiScreens.DoctorPages.AddCouresActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:background="@color/white"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginVertical="20dp">
+
+            <TextView
+                android:id="@+id/tv_create_new_course"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Create New \nCourse"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_hero_logo"
+                app:layout_constraintEnd_toStartOf="@+id/tv_hero_logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_hero_logo" />
+
+            <ImageView
+                android:id="@+id/tv_hero_logo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/hero"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_create_new_course"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputCourse"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:background="#FFFFFF"
+                app:boxStrokeColor="@color/primaryTextColor"
+                app:boxStrokeWidth="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_hero_logo">
+
+                <EditText
+                    android:id="@+id/edit_course_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:hint="Course Name" />
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <EditText
+                android:id="@+id/edit_quiz_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edit_bg_rounded"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:hint="Qize Grade"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toStartOf="@+id/edit_project_grade"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textInputCourse" />
+
+            <EditText
+                android:id="@+id/edit_project_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/edit_bg_rounded"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:hint="Project Grade"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textSize="12sp"
+
+                app:layout_constraintBottom_toBottomOf="@+id/edit_quiz_grade"
+                app:layout_constraintEnd_toStartOf="@+id/edit_attend_grade"
+                app:layout_constraintStart_toEndOf="@+id/edit_quiz_grade"
+                app:layout_constraintTop_toTopOf="@+id/edit_quiz_grade" />
+
+            <EditText
+                android:id="@+id/edit_attend_grade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/edit_bg_rounded"
+                android:elevation="10dp"
+                android:gravity="center"
+                android:hint="Attandance Grade"
+                android:inputType="number"
+                android:padding="10dp"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/edit_project_grade"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/edit_project_grade"
+                app:layout_constraintTop_toTopOf="@+id/edit_project_grade" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/create_course_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="300dp"
+                android:paddingVertical="15dp"
+                android:text="Conferm to create course"
+                android:textAllCaps="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edit_project_grade" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

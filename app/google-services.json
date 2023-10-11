@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "277165737930",
+    "project_id": "elite-room-f8bcf",
+    "storage_bucket": "elite-room-f8bcf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277165737930:android:5e28a16b965a07d9ad7133",
+        "android_client_info": {
+          "package_name": "com.example.eliteroom"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1q5rzh4NN76IK2pN0iiRTNzaA32u_RDc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

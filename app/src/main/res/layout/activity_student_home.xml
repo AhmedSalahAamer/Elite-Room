@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bottomNavigationBackground"
+    tools:context=".UiScreens.StudentsPages.StudentHomeActivity">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_courses"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@id/edit_course_id"
+        app:layout_constraintTop_toBottomOf="@+id/sign_out_btn" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/add_course_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:src="@drawable/add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/sign_out_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_baseline_exit_to_app_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_course_id"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:background="#FFFFFF"
+        android:fontFamily="@font/cairo_semibold"
+        android:gravity="center"
+        android:hint="Enter Course ID"
+        android:inputType="textEmailAddress"
+        android:paddingVertical="15dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/add_course_btn"
+        app:layout_constraintEnd_toStartOf="@+id/add_course_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/add_course_btn" />
+</androidx.constraintlayout.widget.ConstraintLayout>

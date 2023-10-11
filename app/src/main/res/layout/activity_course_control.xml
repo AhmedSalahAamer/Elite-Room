@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:background="@color/colorLightWhite"
+    tools:context=".UiScreens.DoctorPages.CourseControlActivity">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_hor"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_ver"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_top"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_bot"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+
+    <TextView
+        android:id="@+id/control_page_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cairo_bold"
+        android:text="Control Page"
+        android:textColor="@color/bottomNavigationTextColor"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/gl_top"
+        app:layout_constraintEnd_toStartOf="@+id/control_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/control_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/control"
+        app:layout_constraintBottom_toTopOf="@+id/gl_top"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="15dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/gl_hor"
+        app:layout_constraintEnd_toEndOf="@+id/gl_ver"
+        app:layout_constraintStart_toStartOf="@+id/gl_ver"
+        app:layout_constraintTop_toBottomOf="@+id/gl_top" />
+
+
+    <View
+        android:layout_width="2dp"
+        android:layout_height="0dp"
+        android:layout_marginVertical="15dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/gl_bot"
+        app:layout_constraintEnd_toEndOf="@+id/gl_ver"
+        app:layout_constraintStart_toStartOf="@+id/gl_ver"
+        app:layout_constraintTop_toBottomOf="@+id/gl_hor" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginHorizontal="15dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/gl_hor"
+        app:layout_constraintEnd_toStartOf="@+id/gl_ver"
+        app:layout_constraintStart_toStartOf="@+id/gl_hor"
+        app:layout_constraintTop_toTopOf="@+id/gl_hor" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginHorizontal="15dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/gl_hor"
+        app:layout_constraintEnd_toEndOf="@+id/gl_hor"
+        app:layout_constraintStart_toEndOf="@+id/gl_ver"
+        app:layout_constraintTop_toTopOf="@+id/gl_hor" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginHorizontal="30dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/gl_top"
+        app:layout_constraintEnd_toEndOf="@id/gl_top"
+        app:layout_constraintStart_toStartOf="@id/gl_top"
+        app:layout_constraintTop_toTopOf="@id/gl_top" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/gl_bot"
+        app:layout_constraintEnd_toEndOf="@id/gl_bot"
+        app:layout_constraintStart_toStartOf="@id/gl_bot"
+        app:layout_constraintTop_toTopOf="@id/gl_bot" />
+
+    <ImageView
+        android:id="@+id/attend_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/attandacenew"
+        app:layout_constraintBottom_toTopOf="@+id/attend_tv"
+        app:layout_constraintEnd_toStartOf="@id/gl_ver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gl_top" />
+
+    <TextView
+        android:id="@+id/attend_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cairo_bold"
+        android:text="Attandance"
+        android:textColor="@color/bottomNavigationTextColor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/generat_code_tv"
+        app:layout_constraintEnd_toStartOf="@+id/gl_ver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attend_logo" />
+
+    <TextView
+        android:id="@+id/generat_code_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genrate code to attandance"
+        android:textColor="@color/bottomNavigationTextColor"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_open_take_attendance"
+        app:layout_constraintEnd_toStartOf="@+id/gl_ver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attend_tv" />
+
+    <TextView
+        android:id="@+id/btn_open_take_attendance"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/button_back_ground_whit"
+        android:fontFamily="@font/cairo_bold"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="OPEN"
+        android:textColor="@color/bottomNavigationTextColor"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/gl_hor"
+        app:layout_constraintEnd_toStartOf="@+id/gl_ver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/generat_code_tv" />
+
+
+    <ImageView
+        android:id="@+id/quiz_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/qe"
+        app:layout_constraintBottom_toTopOf="@+id/quiz_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gl_ver"
+        app:layout_constraintTop_toBottomOf="@id/gl_top" />
+
+    <TextView
+        android:id="@+id/quiz_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cairo_bold"
+        android:text="Quiz"
+        android:textColor="@color/bottomNavigationTextColor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/generat_code_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gl_ver"
+        app:layout_constraintTop_toBottomOf="@+id/quiz_logo" />
+
+    <TextView
+        android:id="@+id/generat_quiz_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create new quiz"
+        android:textColor="@color/bottomNavigationTextColor"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_open_quiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gl_ver"
+        app:layout_constraintTop_toBottomOf="@+id/quiz_tv" />
+
+    <TextView
+        android:id="@+id/btn_open_quiz"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/button_back_ground_whit"
+        android:fontFamily="@font/cairo_bold"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="OPEN"
+        android:textColor="@color/bottomNavigationTextColor"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/gl_hor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gl_ver"
+        app:layout_constraintTop_toBottomOf="@id/generat_quiz_tv" />
+
+
+    <ImageView
+        android:id="@+id/matrial_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/newupload"
+        app:layout_constraintBottom_toTopOf="@+id/matrial_tv"
+        app:layout_constraintEnd_toStartOf="@id/gl_ver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gl_hor" />
+
+    <TextView
+        android:id="@+id/matrial_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cairo_bold"
+        android:text="Matrials"
+        android:textColor="@color/bottomNavigationTextColor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/generat_matrial_tv"
+        app:layout_constraintEnd_toStartOf="@+id/gl_ver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/matrial_logo" />
+
+    <TextView
+        android:id="@+id/generat_matrial_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Matrial"
+        android:textColor="@color/bottomNavigationTextColor"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_open_matrials"
+        app:layout_constraintEnd_toStartOf="@+id/gl_ver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/matrial_tv" />
+
+    <TextView
+        android:id="@+id/btn_open_matrials"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/button_back_ground_whit"
+        android:fontFamily="@font/cairo_bold"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="OPEN"
+        android:textColor="@color/bottomNavigationTextColor"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/gl_bot"
+        app:layout_constraintEnd_toStartOf="@+id/gl_ver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/generat_matrial_tv" />
+
+
+    <ImageView
+        android:id="@+id/grade_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/grades"
+        app:layout_constraintBottom_toTopOf="@+id/grades_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gl_ver"
+        app:layout_constraintTop_toBottomOf="@id/gl_hor" />
+
+    <TextView
+        android:id="@+id/grades_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cairo_bold"
+        android:text="Grades"
+        android:textColor="@color/bottomNavigationTextColor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/generat_grade_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gl_ver"
+        app:layout_constraintTop_toBottomOf="@+id/grade_logo" />
+
+    <TextView
+        android:id="@+id/generat_grade_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create new quiz"
+        android:textColor="@color/bottomNavigationTextColor"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/btn_open_grade"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gl_ver"
+        app:layout_constraintTop_toBottomOf="@+id/grades_tv" />
+
+    <TextView
+        android:id="@+id/btn_open_grade"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:background="@drawable/button_back_ground_whit"
+        android:fontFamily="@font/cairo_bold"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="OPEN"
+        android:textColor="@color/bottomNavigationTextColor"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/gl_bot"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/gl_ver"
+        app:layout_constraintTop_toBottomOf="@id/generat_grade_tv" />
+
+
+    <ImageView
+        android:id="@+id/chat_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/newchat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gl_bot" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/generate_course_id_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginVertical="8dp"
+        android:layout_marginEnd="10dp"
+        android:text="Copy Course ID To Clip Board"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gl_bot" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
